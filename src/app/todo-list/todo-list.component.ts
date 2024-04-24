@@ -34,19 +34,8 @@ export class TodoListComponent {
   }
 
   editTodo(todo: Todo) {
-    this.editingTodo = todo;
-    this.editingTodoTitle = todo.title;
     this.newTodo = todo.title;
     this.deleteTodo(todo);
-  }
-  
-  cancelEdit() {
-    return;
-  }
-  
-  saveEdit(todo: Todo) {
-    todo.title = this.editingTodoTitle;
-    this.cancelEdit();
   }
   
 }
