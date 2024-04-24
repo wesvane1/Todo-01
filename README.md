@@ -1,3 +1,6 @@
+# Project Description
+This application is a simple todo list, where you can currently perform CD from CRUD commands. Will update at a later date to implement R and U commands.
+
 # Todo01
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.5.

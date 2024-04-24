@@ -1,0 +1,62 @@
+main{
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+/* Styling for the todo input section */
+.todo-input {
+  margin-bottom: 10px;
+}
+
+.todo-input__field {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.todo-input__button {
+  padding: 7px 14px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Styling for the todo list */
+.todo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.todo-item__checkbox {
+  margin-right: 10px;
+}
+
+.todo-item__text {
+  flex: 1;
+  font-size: 16px;
+}
+
+.todo-item__delete, .todo-item__edit {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 4px 9px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+.todo-item__edit {
+  background-color: green;
+}
