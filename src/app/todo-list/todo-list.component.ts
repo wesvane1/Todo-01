@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Todo } from '../todo';
 
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
-  styleUrl: './todo-list.component.css'
+  styleUrl: './todo-list.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TodoListComponent {
   todos: Todo[] = [];
@@ -12,7 +13,10 @@ export class TodoListComponent {
   editingTodo!: Todo;
   editingTodoTitle!: string;
 
-  currentDate = new Date().toLocaleString();
+  // bad practice to add things to a constructor
+  constructor() {
+
+  }
 
   addTodo() {
     if(this.newTodo.trim().length === 0){
@@ -21,7 +25,8 @@ export class TodoListComponent {
     const todo: Todo = {
       id: this.todos.length + 1,
       title: this.newTodo,
-      completed: false
+      completed: false,
+      time: new Date().toLocaleString()
     };
     this.todos.push(todo);
     this.newTodo = '';
