@@ -8,6 +8,7 @@
     <li *ngFor="let todo of todos" class="todo-item">
       <input type="checkbox" [(ngModel)]="todo.completed" (click)="toggleCompleted(todo)" class="todo-item__checkbox">
       <span [ngClass]="{'completed': todo.completed}" class="todo-item__text">{{ todo.title }}</span>
+      <p>Added {{ currentDate }}</p>
       <button (click)="editTodo(todo)" class="todo-item__edit" >Edit</button>
       <button (click)="deleteTodo(todo)" class="todo-item__delete">Delete</button>
     </li>

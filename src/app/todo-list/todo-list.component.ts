@@ -12,6 +12,8 @@ export class TodoListComponent {
   editingTodo!: Todo;
   editingTodoTitle!: string;
 
+  currentDate = new Date().toLocaleString();
+
   addTodo() {
     if(this.newTodo.trim().length === 0){
       return;
@@ -37,5 +39,4 @@ export class TodoListComponent {
     this.newTodo = todo.title;
     this.deleteTodo(todo);
   }
-  
 }
